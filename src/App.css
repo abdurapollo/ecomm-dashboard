@@ -9,6 +9,13 @@
     border-radius: 8px;
     cursor: pointer;
 }
+.update {
+  background-color: #128b12;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
 .App-logo {
   height: 40vmin;

@@ -1,5 +1,6 @@
 import { Navbar, Nav, Button, NavDropdown } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom'
+import './Header.css'
 
 function Header() {
     const user = JSON.parse(localStorage.getItem("user-info"));
@@ -11,7 +12,7 @@ function Header() {
         history.push("./register");
     } 
     return (
-        <div>
+        <div className="header">
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="#home">Navbar</Navbar.Brand>
                 <Nav className="mr-auto nav_bar_wrapper">

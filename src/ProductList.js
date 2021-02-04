@@ -1,4 +1,5 @@
 import React,{ useState, useEffect } from 'react'
+import {Link} from 'react-router-dom'
 import Header from './Header'
 import {Table} from 'react-bootstrap'
 import Footer from './Footer'
@@ -40,7 +41,7 @@ function ProductList()
       <th>Image</th>
       <th>Description</th>
       <th>Price</th>
-      <th>Action</th>
+      <th colspan="2">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -53,6 +54,7 @@ function ProductList()
             <td>{item.description}</td>
             <td>{item.price}</td>
             <td><span className="delete" onClick={() => {deleteProduct(item.id)}}>Delete</span></td>
+            <td><Link to={"/update/"+item.id}><span className="update">Update</span></Link></td>
         </tr>)
     }
   </tbody>
